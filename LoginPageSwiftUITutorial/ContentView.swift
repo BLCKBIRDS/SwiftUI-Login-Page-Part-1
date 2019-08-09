@@ -20,12 +20,12 @@ struct ContentView : View {
         VStack {
             WelcomeText()
             UserImage()
-            TextField($username, placeholder: Text("Username"))
+            TextField("Username", text: $username)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-            SecureField($password, placeholder: Text("Password"))
+            SecureField("Password", text: $password)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
@@ -71,7 +71,7 @@ struct LoginButtonContent : View {
     var body: some View {
         return Text("LOGIN")
             .font(.headline)
-            .color(.white)
+            .foregroundColor(.white)
             .padding()
             .frame(width: 220, height: 60)
             .background(Color.green)
